@@ -1,0 +1,10 @@
+<h1>Demo ciclo de vida Angular</h1>
+
+<app-ciclo-vida [mensaje]="mensaje"></app-ciclo-vida>
+
+<button (click)="cambiarMensaje()">Cambiar Mensaje</button>
+<button (click)="mostrar = !mostrar">
+  {{ mostrar ? 'Destruir Componente' : 'Crear Componente' }}
+</button>
+
+<app-ciclo-vida *ngIf="mostrar" [mensaje]="mensaje"></app-ciclo-vida>
